@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:vendy_app/colors.dart';
 import 'package:vendy_app/screens/explore_screen/explore_screen.dart';
 import 'package:vendy_app/screens/home_screen/home_screen.dart';
 import 'package:vendy_app/screens/profile_screen/profile_screen.dart';
@@ -24,12 +25,13 @@ class _HomePageState extends State<HomePage> {
     return SafeArea(
         child: Scaffold(
             bottomNavigationBar: Container(
+              height: 80,
               decoration: BoxDecoration(
                 boxShadow: [
                   BoxShadow(
                     color: Colors.grey.withValues(alpha: 0.1), // Shadow color
                     blurRadius: 10, // Shadow blur
-                    spreadRadius: 2, // Shadow spread
+                    spreadRadius: 20, // Shadow spread
                     offset: Offset(
                         0, -4), // Position of the shadow (vertical offset)
                   ),
@@ -39,12 +41,14 @@ class _HomePageState extends State<HomePage> {
                   backgroundColor: Colors.white,
                   type:
                       BottomNavigationBarType.fixed, // Prevents shifting/moving
-                  selectedFontSize: 12,
+                  selectedFontSize: 10,
+                  unselectedFontSize: 10,
                   showSelectedLabels: true,
                   showUnselectedLabels: true,
-                  selectedItemColor: Colors.black, // Selected item label color
-                  unselectedItemColor:
-                      Colors.black, // Unselected item label color
+                  selectedItemColor: AppColors.button, // Selected item label color
+                  unselectedItemColor:Colors.black, // Unselected item label color
+                  selectedLabelStyle: TextStyle(fontWeight: FontWeight.bold, color: AppColors.button),
+                  unselectedLabelStyle: TextStyle(fontWeight: FontWeight.normal, color: Colors.black),
                   onTap: (index) {
                     setState(() {
                       _currentIndex = index;
@@ -53,37 +57,69 @@ class _HomePageState extends State<HomePage> {
                   currentIndex: _currentIndex,
                   items: [
                     BottomNavigationBarItem(
-                        activeIcon: Icon(
-                          Icons.home,
+                        activeIcon: Padding(
+                          padding: const EdgeInsets.fromLTRB(0,0,0,6),
+                          child: Image.asset(
+                            'assets/home.png',
+                            height: 26,
+                            width: 26,),
                         ),
-                        icon: Icon(
-                          Icons.home_outlined,
+                        icon: Padding(
+                          padding: const EdgeInsets.fromLTRB(0,0,0,6),
+                          child: Image.asset(
+                            'assets/home_outlined.png',
+                            height: 26,
+                            width: 26,),
                         ),
-                        label: "Home"),
+                        label: 'Home'),
                     BottomNavigationBarItem(
-                        activeIcon: Icon(Icons.history_outlined),
-                        icon: Icon(
-                          Icons.history,
+                        activeIcon: Padding(
+                          padding: const EdgeInsets.fromLTRB(0,0,0,6),
+                          child: Image.asset(
+                            'assets/history.png',
+                            height: 26,
+                            width: 26,),
                         ),
-                        label: "Activities"),
+                        icon: Padding(
+                          padding: const EdgeInsets.fromLTRB(0,0,0,6),
+                          child: Image.asset(
+                            'assets/history_outlined.png',
+                            height: 26,
+                            width: 26,),
+                        ),
+                        label: 'History'),
                     BottomNavigationBarItem(
-                        activeIcon: Icon(
-                          Icons.home,
+                        activeIcon: Padding(
+                          padding: const EdgeInsets.fromLTRB(0,0,0,6),
+                          child: Image.asset(
+                            'assets/settings.png',
+                            height: 26,
+                            width: 26,),
                         ),
-                        icon: Icon(
-                          Icons.settings,
+                        icon: Padding(
+                          padding: const EdgeInsets.fromLTRB(0,0,0,6),
+                          child: Image.asset(
+                            'assets/settings_outlined.png',
+                            height: 26,
+                            width: 26,),
                         ),
-                        label: "Settings"),
+                        label: 'Settings'),
                     BottomNavigationBarItem(
-                        activeIcon: Icon(
-                          Icons.home,
-                          color: Colors.black,
+                        activeIcon: Padding(
+                          padding: const EdgeInsets.fromLTRB(0,0,0,6),
+                          child: Image.asset(
+                            'assets/profile.png',
+                            height: 26,
+                            width: 26,),
                         ),
-                        icon: Icon(
-                          Icons.person,
-                          color: Colors.black,
+                        icon: Padding(
+                          padding: const EdgeInsets.fromLTRB(0,0,0,6),
+                          child: Image.asset(
+                            'assets/profile_outlined.png',
+                            height: 26,
+                            width: 26,),
                         ),
-                        label: "Profile")
+                        label: 'Profile'),
                   ]),
             ),
             body: screens[_currentIndex]));

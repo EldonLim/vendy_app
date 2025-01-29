@@ -24,11 +24,23 @@ class _HomeScreenState extends State<HomeScreen> {
           children: [
             Column(
               children: [
-                Image.asset(
+                Container(
+                  child: Image.asset(
                   'assets/vendy_banner.jpg',
                   height: screenHeight * 0.25,
                   width: screenWidth,
                   fit: BoxFit.cover,
+                ),
+                decoration: BoxDecoration(
+                        boxShadow: [
+                      BoxShadow(
+                        color: Colors.grey.withOpacity(0.2), // Shadow color with opacity
+                        spreadRadius: 30, // Spread radius
+                        blurRadius: 30,  // Blur radius
+                        offset: Offset(0, 4), // Offset in x and y
+                      ),
+                    ],
+                  ),
                 ),
                 SizedBox(
                   height: 40,
@@ -65,7 +77,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           Text(
                             "Explore",
                             style: TextStyle(
-                                fontWeight: FontWeight.w500, fontSize: 22),
+                                fontWeight: FontWeight.bold, fontSize: 19),
                           ),
                           Icon(
                             Icons.arrow_forward,
@@ -102,7 +114,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           Text(
                             "Cashless Machines",
                             style: TextStyle(
-                                fontWeight: FontWeight.w500, fontSize: 22),
+                                fontWeight: FontWeight.bold, fontSize: 19),
                           ),
                           Icon(
                             Icons.arrow_forward,
@@ -136,14 +148,15 @@ class _HomeScreenState extends State<HomeScreen> {
                       decoration: BoxDecoration(
                           color: AppColors.button,
                           shape: BoxShape.rectangle,
-                          borderRadius: BorderRadius.circular(20)),
+                          borderRadius: BorderRadius.circular(20)
+                          ),
                       child: Center(
                         child: Text(
                           "Near me",
                           style: TextStyle(
                               //329f8b
                               color: Colors.white,
-                              fontSize: 20,
+                              fontSize: 19,
                               fontWeight: FontWeight.bold),
                         ),
                       ),

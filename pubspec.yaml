@@ -25,3 +25,17 @@ flutter:
     - assets/snacks_icon.png
     - assets/hot_meals_icon.png
     - assets/vending_machine.png
+    - assets/history_outlined.png
+    - assets/history.png
+    - assets/home_outlined.png
+    - assets/home.png
+    - assets/profile_outlined.png
+    - assets/profile.png
+    - assets/settings_outlined.png
+    - assets/settings.png
+
+fonts:
+    - family: Inter
+      fonts:
+        - asset: assets/fonts/Inter_18pt-Regular.ttf
+        - asset: assets/fonts/Inter_24pt-Bold.ttf
