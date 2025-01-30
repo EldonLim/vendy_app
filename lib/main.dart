@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:vendy_app/pages/cashlessmachinespage.dart';
 import 'package:vendy_app/pages/explorepage.dart';
 import 'package:vendy_app/pages/homepage.dart';
+import 'package:vendy_app/pages/menupage/menupage.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -19,7 +20,7 @@ class MainApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
         theme: ThemeData(fontFamily: "Inter"),
-        debugShowCheckedModeBanner: false, home: CashlessMachinesPage(),
+        debugShowCheckedModeBanner: false, home: HomePage(),
         );
   }
 }

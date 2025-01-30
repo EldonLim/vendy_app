@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:vendy_app/colors.dart';
-import 'package:vendy_app/widgets/category_container.dart';
+import 'package:vendy_app/utils/category_container.dart';
 
 class MachineContainer extends StatelessWidget {
   const MachineContainer({super.key});
@@ -8,7 +8,7 @@ class MachineContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(bottom: 25),
+      padding: const EdgeInsets.fromLTRB(20,0,20,25),
       child: SizedBox(
         height: 130,
         // decoration: BoxDecoration(color: const Color.fromARGB(255, 241, 241, 241)),
