@@ -31,7 +31,7 @@ class _CashlessMachinesPageState extends State<CashlessMachinesPage> {
                                 height: 7,
                                 decoration: BoxDecoration(color: Color(0xFFF1F1F1)),
                               ): (index==1? SizedBox(height: 25) : GestureDetector(child: MachineContainer(),
-                              onTap: () => Navigator.pop(context)));
+                              onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context)=>MenuPage()))));
                           }),
             ),
             

@@ -34,6 +34,10 @@ flutter:
     - assets/settings_outlined.png
     - assets/settings.png
     - assets/menu_item.jpg
+    - assets/arrow_map.png
+    - assets/locator_map.png
+    - assets/machine_map.png
+
 
   fonts:
     - family: Inter
