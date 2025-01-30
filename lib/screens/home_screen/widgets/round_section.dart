@@ -20,7 +20,7 @@ class RoundSection extends StatelessWidget {
         SizedBox(
           height: 10,
         ),
-        Text(foodType)
+        Text(foodType, style: TextStyle(fontSize: 13)),
       ],
     );
   }

@@ -34,20 +34,20 @@ class ProductContainer extends StatelessWidget {
             ),
             Text(
               "Vending Machine",
-              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15),
             ),
             Row(
               children: [
-                Text("0.09km"),
+                Text("0.09km", style: TextStyle(fontSize: 13),),
                 Spacer(),
                 Icon(
                   Icons.star,
-                  color: Colors.yellow,
+                  color: Color(0xFFFFCC00),
                 ),
                 SizedBox(
                   width: 3,
                 ),
-                Text("4.1"),
+                Text("4.1", style: TextStyle(fontSize: 13),),
               ],
             )
           ],

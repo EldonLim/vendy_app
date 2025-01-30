@@ -32,18 +32,19 @@ class _CustomSearchBarState extends State<CustomSearchBar> {
           EdgeInsets.symmetric(horizontal: 16.0)),
       leading: Icon(Icons.search),
       elevation: WidgetStatePropertyAll(
-          4), // Control shadow intensity (lower values = lighter shadow)
-      shadowColor: WidgetStatePropertyAll(Colors.black
-          .withValues(alpha: 0.5)), // Adjust shadow color and opacity
+          0), // Control shadow intensity (lower values = lighter shadow)
+      // shadowColor: WidgetStatePropertyAll(Colors.black
+      //     .withValues(alpha: 0.5)), // Adjust shadow color and opacity
       trailing: [
         Container(
-            padding: EdgeInsets.only(left: 10),
+            height: 60,
+            padding: EdgeInsets.only(left: 15),
             decoration: BoxDecoration(
-                border: Border(left: BorderSide(width: 1, color: Colors.grey))),
+                border: Border(left: BorderSide(width: 1, color: Color(0xFFD9D9D9)))),
             child: Icon(Icons.favorite_border))
       ],
       hintText: "Search food",
-      hintStyle: WidgetStatePropertyAll(TextStyle(fontSize: 18)),
+      hintStyle: WidgetStatePropertyAll(TextStyle(fontSize: 19, color: Color(0xFF7A7A7A))),
     );
   }
 }
