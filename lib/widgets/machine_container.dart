@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:vendy_app/colors.dart';
 import 'package:vendy_app/widgets/category_container.dart';
 
 class MachineContainer extends StatelessWidget {
@@ -8,9 +9,9 @@ class MachineContainer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.only(bottom: 25),
-      child: Container(
+      child: SizedBox(
         height: 130,
-        decoration: BoxDecoration(color: const Color.fromARGB(255, 241, 241, 241)),
+        // decoration: BoxDecoration(color: const Color.fromARGB(255, 241, 241, 241)),
         child: Row(
           children: [
             ClipRRect(
@@ -21,8 +22,12 @@ class MachineContainer extends StatelessWidget {
               fit: BoxFit.cover,
               ),
             ),
+            SizedBox(
+              width: 14,
+            ),
             Expanded( //column need to be wrapped in expanded if not in container as dk hw much space to take up
               child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.start, 
                 children: [
                   Row(
@@ -34,10 +39,16 @@ class MachineContainer extends StatelessWidget {
                       )),
                       Spacer(),
                       Icon(Icons.star, color: Colors.amber),
+                      SizedBox(
+                        width: 4,
+                      ),
                       Text('4.9', style: TextStyle(
                         fontSize: 14
                       ),)
                     ],
+                  ),
+                  SizedBox(
+                    height: 8,
                   ),
                   Row(
                     children: [
@@ -49,9 +60,14 @@ class MachineContainer extends StatelessWidget {
                       Text("cashless", style: TextStyle(
                         fontWeight: FontWeight.bold,
                         fontSize: 13,
+                        fontStyle: FontStyle.italic,
+                        color: AppColors.button,
                       ),
                      )
                     ],
+                  ),
+                  SizedBox(
+                    height: 8,
                   ),
                   SizedBox(
                     width: 190,

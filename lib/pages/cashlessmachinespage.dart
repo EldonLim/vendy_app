@@ -1,14 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:vendy_app/pages/explore_page/widgets/machine_container.dart';
+import 'package:vendy_app/widgets/machine_container.dart';
+import 'package:vendy_app/pages/homepage.dart';
+import 'package:vendy_app/screens/home_screen/home_screen.dart';
 
-class ExplorePage extends StatefulWidget {
-  const ExplorePage({super.key});
+class CashlessMachinesPage extends StatefulWidget {
+  const CashlessMachinesPage({super.key});
 
   @override
-  State<ExplorePage> createState() => _ExplorePageState();
+  State<CashlessMachinesPage> createState() => _CashlessMachinesPageState();
 }
 
-class _ExplorePageState extends State<ExplorePage> {
+class _CashlessMachinesPageState extends State<CashlessMachinesPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -43,10 +45,15 @@ class _ExplorePageState extends State<ExplorePage> {
                   children: [
                     Padding(
                       padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
-                      child: Icon(Icons.arrow_back),
+                      child: GestureDetector(
+                        child: Icon(Icons.arrow_back),
+                        onTap: () {
+                          Navigator.push(context, MaterialPageRoute(
+                            builder: (context) => HomePage()));
+                        },),
                     ),
                     Text(
-                      "Explore",
+                      "Cashless Machines",
                       style: TextStyle(fontWeight: FontWeight.w600, fontSize: 19),
                     ),
                   ],

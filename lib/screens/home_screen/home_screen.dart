@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:vendy_app/colors.dart';
+import 'package:vendy_app/pages/cashlessmachinespage.dart';
 import 'package:vendy_app/screens/home_screen/widgets/product_container.dart';
 import 'package:vendy_app/screens/home_screen/widgets/round_section.dart';
 import 'package:vendy_app/screens/home_screen/widgets/search_bar.dart';
 
-import '../../pages/explore_page/explorepage.dart';
+import '../../pages/explorepage.dart';
 import '../history_screen/history_screen.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -127,9 +128,14 @@ class _HomeScreenState extends State<HomeScreen> {
                             style: TextStyle(
                                 fontWeight: FontWeight.w600, fontSize: 19),
                           ),
-                          Icon(
-                            Icons.arrow_forward,
-                            size: 22,
+                          GestureDetector(
+                            child: Icon(
+                              Icons.arrow_forward,
+                              size: 22,
+                            ),
+                            onTap: () {
+                              Navigator.push(context, MaterialPageRoute(builder: (context)=> CashlessMachinesPage()));
+                            },
                           )
                         ],
                       ),

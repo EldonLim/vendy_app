@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:vendy_app/pages/explore_page/explorepage.dart';
+import 'package:vendy_app/pages/cashlessmachinespage.dart';
+import 'package:vendy_app/pages/explorepage.dart';
 import 'package:vendy_app/pages/homepage.dart';
 
 void main() {
@@ -18,7 +19,7 @@ class MainApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
         theme: ThemeData(fontFamily: "Inter"),
-        debugShowCheckedModeBanner: false, home: ExplorePage(),
+        debugShowCheckedModeBanner: false, home: CashlessMachinesPage(),
         );
   }
 }
