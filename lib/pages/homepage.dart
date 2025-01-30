@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:vendy_app/colors.dart';
-import 'package:vendy_app/screens/explore_screen/explore_screen.dart';
+import 'package:vendy_app/screens/history_screen/history_screen.dart';
 import 'package:vendy_app/screens/home_screen/home_screen.dart';
 import 'package:vendy_app/screens/profile_screen/profile_screen.dart';
 import 'package:vendy_app/screens/settings_screen/settings_screen.dart';
@@ -16,7 +16,7 @@ class _HomePageState extends State<HomePage> {
   int _currentIndex = 0;
   List<Widget> screens = [
     HomeScreen(),
-    ExploreScreen(),
+    HistoryScreen(),
     SettingsScreen(),
     ProfileScreen()
   ];

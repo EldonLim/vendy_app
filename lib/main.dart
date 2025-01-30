@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:vendy_app/pages/explore_page/explorepage.dart';
 import 'package:vendy_app/pages/homepage.dart';
 
 void main() {
@@ -16,7 +17,8 @@ class MainApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        debugShowCheckedModeBanner: false, home: HomePage(),
-        theme: ThemeData(fontFamily: "Inter"),);
+        theme: ThemeData(fontFamily: "Inter"),
+        debugShowCheckedModeBanner: false, home: ExplorePage(),
+        );
   }
 }

@@ -44,7 +44,7 @@ class _CustomSearchBarState extends State<CustomSearchBar> {
             child: Icon(Icons.favorite_border))
       ],
       hintText: "Search food",
-      hintStyle: WidgetStatePropertyAll(TextStyle(fontSize: 1)),
+      hintStyle: WidgetStatePropertyAll(TextStyle(fontSize: 19, color: Color(0xFF7A7A7A))),
     );
   }
 }
