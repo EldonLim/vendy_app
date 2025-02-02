@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:vendy_app/widgets/machine_container.dart';
+import 'package:vendy_app/pages/menupage/menupage.dart';
+import 'package:vendy_app/utils/machine_container.dart';
 import 'package:vendy_app/pages/homepage.dart';
 import 'package:vendy_app/screens/home_screen/home_screen.dart';
 
@@ -19,7 +20,7 @@ class _CashlessMachinesPageState extends State<CashlessMachinesPage> {
         child: Stack(
           children: [
             Padding(
-              padding: EdgeInsets.fromLTRB(20, 48, 20, 0),
+              padding: EdgeInsets.fromLTRB(0, 48, 0, 0),
                   child: ListView.builder(
                           // physics: ClampingScrollPhysics(), // Prevents overscrolling
                           scrollDirection: Axis.vertical,
@@ -29,7 +30,8 @@ class _CashlessMachinesPageState extends State<CashlessMachinesPage> {
                               Container(
                                 height: 7,
                                 decoration: BoxDecoration(color: Color(0xFFF1F1F1)),
-                              ): (index==1? SizedBox(height: 25) : MachineContainer());
+                              ): (index==1? SizedBox(height: 25) : GestureDetector(child: MachineContainer(),
+                              onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context)=>MenuPage()))));
                           }),
             ),
             

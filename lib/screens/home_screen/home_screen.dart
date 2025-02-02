@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:vendy_app/colors.dart';
 import 'package:vendy_app/pages/cashlessmachinespage.dart';
+import 'package:vendy_app/pages/mappage/mappage.dart';
+import 'package:vendy_app/pages/menupage/menupage.dart';
 import 'package:vendy_app/screens/home_screen/widgets/product_container.dart';
 import 'package:vendy_app/screens/home_screen/widgets/round_section.dart';
 import 'package:vendy_app/screens/home_screen/widgets/search_bar.dart';
@@ -110,7 +112,8 @@ class _HomeScreenState extends State<HomeScreen> {
                             return Padding(
                               padding:
                                   EdgeInsets.only(right: index == 7 ? 15 : 0),
-                              child: ProductContainer(),
+                              child: GestureDetector(child: ProductContainer(),
+                              onTap: () => Navigator.push(context, MaterialPageRoute(builder:(context)=>MenuPage())),),
                             );
                           }),
                     ),
@@ -152,7 +155,10 @@ class _HomeScreenState extends State<HomeScreen> {
                             return Padding(
                               padding:
                                   EdgeInsets.only(right: index == 7 ? 15 : 0),
-                              child: ProductContainer(),
+                              child: GestureDetector(child: ProductContainer(),
+                              onTap:() {
+                                Navigator.push(context, MaterialPageRoute(builder: (context)=>MenuPage()));
+                              },),
                             );
                           }),
                     ),
@@ -168,13 +174,18 @@ class _HomeScreenState extends State<HomeScreen> {
                           borderRadius: BorderRadius.circular(20)
                           ),
                       child: Center(
-                        child: Text(
-                          "Near me",
-                          style: TextStyle(
-                              //329f8b
-                              color: Colors.white,
-                              fontSize: 19,
-                              fontWeight: FontWeight.bold),
+                        child: GestureDetector(
+                          child: Text(
+                            "Near me",
+                            style: TextStyle(
+                                //329f8b
+                                color: Colors.white,
+                                fontSize: 19,
+                                fontWeight: FontWeight.bold),
+                          ),
+                          onTap: () {
+                            Navigator.push(context, MaterialPageRoute(builder: (context)=>MapPage()));
+                          },
                         ),
                       ),
                     ),

@@ -33,10 +33,15 @@ flutter:
     - assets/profile.png
     - assets/settings_outlined.png
     - assets/settings.png
+    - assets/menu_item.jpg
+    - assets/arrow_map.png
+    - assets/locator_map.png
+    - assets/machine_map.png
 
-fonts:
+
+  fonts:
     - family: Inter
       fonts:
         - asset: assets/fonts/Inter_18pt-Regular.ttf
-        - asset: assets/fonts/Inter_24pt-Bold.ttf
         - asset: assets/fonts/Inter_18pt-SemiBold.ttf
+        - asset: assets/fonts/Inter_24pt-Bold.ttf
