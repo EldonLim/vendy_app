@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:vendy_app/colors.dart';
-import 'package:vendy_app/pages/cashlessmachinespage.dart';
-import 'package:vendy_app/pages/mappage/mappage.dart';
-import 'package:vendy_app/pages/menupage/menupage.dart';
+import 'package:vendy_app/pages/cashless_machine_page/cashless_machines_page.dart';
+import 'package:vendy_app/pages/map_page/map_page.dart';
+import 'package:vendy_app/pages/menu_page/menu_page.dart';
 import 'package:vendy_app/screens/home_screen/widgets/product_container.dart';
 import 'package:vendy_app/screens/home_screen/widgets/round_section.dart';
 import 'package:vendy_app/screens/home_screen/widgets/search_bar.dart';
 
-import '../../pages/explorepage.dart';
+import '../../pages/explore_machine_page/explore_page.dart';
 import '../history_screen/history_screen.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -32,17 +32,18 @@ class _HomeScreenState extends State<HomeScreen> {
               children: [
                 Container(
                   child: Image.asset(
-                  'assets/vendy_banner.jpg',
-                  height: screenHeight * 0.25,
-                  width: screenWidth,
-                  fit: BoxFit.cover,
-                ),
-                decoration: BoxDecoration(
-                        boxShadow: [
+                    'assets/vendy_banner.jpg',
+                    height: screenHeight * 0.25,
+                    width: screenWidth,
+                    fit: BoxFit.cover,
+                  ),
+                  decoration: BoxDecoration(
+                    boxShadow: [
                       BoxShadow(
-                        color: Colors.grey.withOpacity(0.2), // Shadow color with opacity
+                        color: Colors.grey
+                            .withOpacity(0.2), // Shadow color with opacity
                         spreadRadius: 30, // Spread radius
-                        blurRadius: 30,  // Blur radius
+                        blurRadius: 30, // Blur radius
                         offset: Offset(0, 4), // Offset in x and y
                       ),
                     ],
@@ -93,7 +94,8 @@ class _HomeScreenState extends State<HomeScreen> {
                             onTap: () {
                               Navigator.push(
                                 context,
-                                MaterialPageRoute(builder: (context) => ExplorePage()),
+                                MaterialPageRoute(
+                                    builder: (context) => ExplorePage()),
                               );
                             },
                           )
@@ -112,8 +114,13 @@ class _HomeScreenState extends State<HomeScreen> {
                             return Padding(
                               padding:
                                   EdgeInsets.only(right: index == 7 ? 15 : 0),
-                              child: GestureDetector(child: ProductContainer(),
-                              onTap: () => Navigator.push(context, MaterialPageRoute(builder:(context)=>MenuPage())),),
+                              child: GestureDetector(
+                                child: ProductContainer(),
+                                onTap: () => Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => MenuPage())),
+                              ),
                             );
                           }),
                     ),
@@ -137,7 +144,11 @@ class _HomeScreenState extends State<HomeScreen> {
                               size: 22,
                             ),
                             onTap: () {
-                              Navigator.push(context, MaterialPageRoute(builder: (context)=> CashlessMachinesPage()));
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) =>
+                                          CashlessMachinesPage()));
                             },
                           )
                         ],
@@ -155,10 +166,15 @@ class _HomeScreenState extends State<HomeScreen> {
                             return Padding(
                               padding:
                                   EdgeInsets.only(right: index == 7 ? 15 : 0),
-                              child: GestureDetector(child: ProductContainer(),
-                              onTap:() {
-                                Navigator.push(context, MaterialPageRoute(builder: (context)=>MenuPage()));
-                              },),
+                              child: GestureDetector(
+                                child: ProductContainer(),
+                                onTap: () {
+                                  Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) => MenuPage()));
+                                },
+                              ),
                             );
                           }),
                     ),
@@ -171,8 +187,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       decoration: BoxDecoration(
                           color: AppColors.button,
                           shape: BoxShape.rectangle,
-                          borderRadius: BorderRadius.circular(20)
-                          ),
+                          borderRadius: BorderRadius.circular(20)),
                       child: Center(
                         child: GestureDetector(
                           child: Text(
@@ -184,7 +199,10 @@ class _HomeScreenState extends State<HomeScreen> {
                                 fontWeight: FontWeight.bold),
                           ),
                           onTap: () {
-                            Navigator.push(context, MaterialPageRoute(builder: (context)=>MapPage()));
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => MapPage()));
                           },
                         ),
                       ),
